@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<style>
+		
+			@keyframes aparecer{
+				
+				0%{
+					opacity:0;
+				}
+				33%{
+					opacity:1;
+				}
+				66%{
+					opacity:1;
+				}
+				100%{
+					opacity:0;
+				}
+			
+			}
+			.slide{
+		
+				opacity:0;
+				/*animation-name:aparecer;*/
+				animation-duration:4s;
+				/*animation-iteration-count:infinite;*/
+				position: fixed;
+			
+			}
+			
+			
+			#s2{
+				
+				animation-delay:5s;
+				
+			}
+			#s3{
+				
+				animation-delay:10s;
+				
+			}
+			#s4{
+			
+				animation-delay:15s;
+				
+			}
+			#carrusel > button {
+				margin-top:160px;
+			}
+			
+		</style>
+		
+			<script>
+				var nroSlide= 0;
+				
+				function nextSlide(){
+					if(nroSlide == 4){
+						nroSlide=0;
+					}else{
+						nroSlide++;
+						var slide = document.getElementById("s"+nroSlide);
+						slide.style.animationName=" aparecer";
+					}
+				
+				}
+				
+				function prevSlide(){
+				
+				
+				}
+			
+			</script>
+	
+	</head>
+	
+<body>
+	<!-- document content-->
+	
+	
+	
+	<div id= "carrusel">
+	
+		<div class="slide" id="s1">
+			<img src="s1.jpg" />
+		</div>
+		
+		<div class="slide" id="s2">
+			<img src="s2.jpg" />
+		</div>
+		
+		<div class="slide" id="s3">
+			<img src="s3.jpg" />
+		</div>
+		
+		<div class="slide" id="s4">
+			<img src="s4.jpg" />
+		</div>
+		
+		<button onclick="nextSlide()"> > </button>
+		<button onclick="prevSlide()"> < </button>
+	</div>
+	
+</div>
+
+<html>
+
+
+		
+		
