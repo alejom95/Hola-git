@@ -68,6 +68,23 @@
 				
 				function prevSlide(){
 				
+				if(nroSlide < 0){
+					var previous = document.getElementById("s"+nroSlie);
+						previous.style.animationName="";
+				}
+
+				if(nroSlide==0){
+
+					nroSlide = 4;
+				}
+	
+				nroSlide--;
+
+					var slide = document.getElementById("s"+nroSlide);
+					slide.style.animationName="aparecer";
+	
+
+
 				
 				}
 			
